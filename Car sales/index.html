@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DriveNow | Premium Car Sales</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images/peter-broomfield-m3m-lnR90uM-unsplash.jpg') no-repeat center center/cover;
+      color: #333;
+      height: 100vh; /* Ensure the body takes up the full viewport height */
+    }
+
+    header {
+      background: rgba(17, 17, 17, 0.8); /* Add transparency for better visibility */
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    .hero {
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .cars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .car {
+      background: rgba(110, 120, 180, 0.829);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .car:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .car img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .car h3 {
+      margin: 1rem 0 0.5rem;
+    }
+
+    .car p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .video-section {
+      background: rgba(113, 137, 189, 0.8);
+      text-align: center;
+    }
+
+    video {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .contact {
+      background: url('images/josh-berquist-0kxOW0I-HLM-unsplash.jpg') no-repeat center center/cover; 
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 1rem;
+    }
+
+    .contact input, .contact textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      padding: 10px 20px;
+      background: #f90;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    footer {
+      
+      background: #000;
+      color: #6788b9;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DriveNow | Premium Car Sales</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Find Your Dream Car Today</h2>
+  </section>
+
+  <section>
+    <h2 style="text-align:center; margin-bottom: 1rem;">Featured Cars</h2>
+    <div class="cars">
+      <div class="car">
+        <img src="images/eyosias-g-Rlam5eLhyl0-unsplash.jpg" alt="Luxury Car">
+        <h3>2022 BMW M5</h3>
+        <p>Powerful, elegant, and equipped with the latest tech. Starting at $85,000.</p>
+      </div>
+      <div class="car">
+        <img src="images/range-rover-5260745_960_720.jpg" alt="SUV Car">
+        <h3>2023 Range Rover Evoque</h3>
+        <p>Luxury meets utility. A perfect choice for city and off-road. From $60,000.</p>
+      </div>
+      <div class="car">
+        <img src="images/tesla-5937063_960_720.jpg" alt="Electric Car">
+        <h3>Tesla Model 3</h3>
+        <p>Eco-friendly, stylish, and packed with autopilot features. Starting at $40,000.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>See It in Action</h2>
+    <video controls>
+      <source src="videos/NO TIME TO DIE _ LAND ROVER NEW DEFENDER.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="alert('Thank you! We will get back to you.'); return false;">
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea rows="4" placeholder="Your Message"></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 DriveNow. All rights reserved.
+  </footer>
+
+</body>
+</html>
+<script>
+  // Simple form submission handler
+  document.querySelector('.contact form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you! We will get back to you.');
+  });
+</script>
